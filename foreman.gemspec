@@ -2,7 +2,7 @@ $:.unshift File.expand_path("../lib", __FILE__)
 require "foreman/version"
 
 Gem::Specification.new do |gem|
-  gem.name     = "foreman-robb"
+  gem.name     = "foreman-restart-hack"
   gem.license  = "MIT"
   gem.version  = Foreman::VERSION
 
