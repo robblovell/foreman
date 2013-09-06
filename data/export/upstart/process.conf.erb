@@ -4,8 +4,4 @@ respawn
 
 exec su - <%= user %> -c 'cd <%= engine.root %>; export PORT=<%= port %>;<% engine.env.each_pair do |var,env| %> export <%= var.upcase %>=<%= shell_quote(env) %>; <% end %> <%= process.command %> >> <%= log %>/<%=name%>-<%=num%>.log 2>&1'
 
-<% if restart_delay %>
-    post-stop exec sleep <%= restart_delay %>
-<% else %>
-    post-stop exec sleep 10
-<% end %>
+post-stop exec sleep 10
