@@ -2,14 +2,14 @@ $:.unshift File.expand_path("../lib", __FILE__)
 require "foreman/version"
 
 Gem::Specification.new do |gem|
-  gem.name     = "foreman"
+  gem.name     = "foreman-robb"
   gem.license  = "MIT"
   gem.version  = Foreman::VERSION
 
-  gem.author   = "David Dollar"
+  gem.author   = "David Dollar with stupid mod from Robb Lovell"
   gem.email    = "ddollar@gmail.com"
   gem.homepage = "http://github.com/ddollar/foreman"
-  gem.summary  = "Process manager for applications with multiple components"
+  gem.summary  = "Process manager for applications with multiple components (with upstart export restart delay)"
 
   gem.description = gem.summary
 
