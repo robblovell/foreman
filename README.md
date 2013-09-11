@@ -42,6 +42,10 @@ David Dollar
 #### Patches contributed by
 [Contributor List](https://github.com/ddollar/foreman/contributors)
 
+## Install/Build
+
+gem build foreman.gemspec
+
 ## License
 
 Foreman is licensed under the MIT license.
