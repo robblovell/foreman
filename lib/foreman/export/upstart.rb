@@ -16,10 +16,10 @@ class Foreman::Export::Upstart < Foreman::Export::Base
       next if engine.formation[name] < 1
       write_template "upstart/process_master.conf.erb", "#{app}-#{name}.conf", binding
 
-      base.upto(engine.formation[name]+base) do |num|
+      1.upto(engine.formation[name]+base) do |num|
         port = engine.port_for(process, num)
         # TODO: pass flag with the process restart delay to the erb
-        write_template "upstart/process.conf.erb", "#{app}-#{name}-#{num}.conf", binding
+        write_template "upstart/process.conf.erb", "#{app}-#{name}-#{num+base}.conf", binding
       end
     end
   end
