@@ -68,6 +68,10 @@ class Foreman::Export::Base
     options[:user] || app
   end
 
+  def base
+    options[:base] || 1
+  end
+
 private ######################################################################
 
   def self.warn_deprecation!
